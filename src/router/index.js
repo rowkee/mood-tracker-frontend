@@ -10,7 +10,7 @@ import InsightsView from '../components/InsightsView'
 const routes = [
     {
         name: 'LoginPage',
-        path: '/login',
+        path: '/',
         component: LoginPage
     },
     {
