@@ -42,7 +42,7 @@ export default {
       googleLogout()
       await this.$cookies.remove('user_session')
       this.isLoggedIn = false
-      this.$router.replace({ path: `/login` })
+      this.$router.replace({ path: `/` })
     }
   }
 }

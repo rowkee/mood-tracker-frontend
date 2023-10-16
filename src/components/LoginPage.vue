@@ -38,7 +38,7 @@ export default {
             const userData = decodeCredential(response.credential)
             this.userName = userData.given_name
             this.$cookies.set('user_session', response.credential)
-            fetch('http://localhost:4000/login', {
+            fetch('${process.env.VUE_APP_BACKEND_URL}', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"

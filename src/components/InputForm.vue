@@ -130,7 +130,7 @@ export default {
             this.userName = userData.given_name
             this.userEmail = userData.email
         } else {
-            this.$router.replace({ path: `/login` })
+            this.$router.replace({ path: `/` })
         }
     },
     components: {
@@ -140,7 +140,7 @@ export default {
     methods: {
         submitEntry: function (e) {
             e.preventDefault()
-            fetch('http://localhost:4000/entry/add', {
+            fetch(`${process.env.VUE_APP_BACKEND_URL}/entry/add`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

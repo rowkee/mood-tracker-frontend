@@ -48,7 +48,7 @@
 <script>
 import { decodeCredential } from 'vue3-google-login'
 import NavBar from './NavBar.vue'
-const API_URL = 'http://localhost:4000/entry/list/edit'
+const API_URL = `${process.env.VUE_APP_BACKEND_URL}/entry/list/edit`
 import { useRoute } from 'vue-router';
 
 export default {
@@ -72,7 +72,7 @@ export default {
             this.userName = userData.given_name
             this.email = userData.email
         } else {
-            this.$router.replace({ path: `/login` })
+            this.$router.replace({ path: `/` })
         }
             const route = useRoute()
             fetch(`${API_URL}/${route.params.id}`)
@@ -85,7 +85,7 @@ export default {
 
     methods: {
         editEntry: function () {
-            fetch(`http://localhost:4000/entry/list/edited/${this.id}`, {
+            fetch(`${API_URL}/entry/list/edited/${this.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -113,7 +113,7 @@ export default {
             });
         },
         deleteEntry: function () {
-            fetch(`http://localhost:4000/entry/list/delete/${this.id}`, {
+            fetch(`${API_URL}/entry/list/delete/${this.id}`, {
                     method: "DELETE",
                 })
                 .then(res => {

@@ -49,9 +49,9 @@ export default {
             this.userName = userData.given_name
             this.email = userData.email
         } else {
-            this.$router.replace({path: `/login`})
+            this.$router.replace({path: `/`})
         }
-        fetch('http://localhost:4000/weather')
+        fetch(`${process.env.VUE_APP_BACKEND_URL}/weather`)
             .then(response => response.json())
             .then(result => {
                 this.entries = result

@@ -6,7 +6,6 @@
     
 <script>
 import { decodeCredential } from 'vue3-google-login'
-// const API_URL = 'http://localhost:4000/trends'
 import NavBar from './NavBar.vue'
 
 export default {
@@ -30,7 +29,7 @@ export default {
             this.userName = userData.given_name
             this.email = userData.email
         } else {
-            this.$router.replace({path: `/login`})
+            this.$router.replace({path: `/`})
         }
     },
 }

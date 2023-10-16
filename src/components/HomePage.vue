@@ -29,7 +29,7 @@ export default {
             const userData = decodeCredential(this.$cookies.get('user_session'))
             this.userName = userData.given_name
         } else {
-            this.$router.replace({ path: `/login` })
+            this.$router.replace({ path: `/` })
         }
     }
 }
