@@ -109,7 +109,7 @@ export default {
             })
             .then(res => {
                 console.log(res.status)
-                this.$router.replace({path: `/entry/list/`})
+                this.$router.replace({path: `/entry/list`})
             });
         },
         deleteEntry: function () {
@@ -118,7 +118,7 @@ export default {
                 })
                 .then(res => {
                     console.log(res.status)
-                    this.$router.replace({path: `/entry/list/`})
+                    this.$router.replace({path: `/entry/list`})
                 });
             alert('AAAAGGHHH')
             }
