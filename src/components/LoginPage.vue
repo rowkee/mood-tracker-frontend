@@ -50,7 +50,7 @@ export default {
             .then(() => {
                 console.log('session saved')
             })
-            this.$router.replace({path: `/entry/list`})          
+            this.$router.replace({path: `/home`})          
         },
         handleLogOut: function () {
             googleLogout()

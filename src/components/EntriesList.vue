@@ -87,7 +87,7 @@ export default {
             this.userName = userData.given_name
             this.email = userData.email
         } else {
-            this.$router.replace({path: ``})
+            this.$router.replace({path: `/`})
         }
         fetch(`${process.env.VUE_APP_BACKEND_URL}/entry/list/${this.email}`)
             .then(response => response.json())

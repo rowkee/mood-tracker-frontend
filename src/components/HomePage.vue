@@ -1,8 +1,9 @@
 <template> 
     <NavBar/>
-    <H1> Welcome to your Moodle {{ userName }} :huggingemoji: </H1>
-    <!-- <button type="button" class="btn btn-primary">Add Entry</button> -->
-    </template>
+    <H1> Welcome to your Moodles <br> {{ userName }}! </H1>
+    <hr>
+    <img src="../assets/mrmoodle.png" alt="Mr Moodle Pic">
+</template>
 
 
 <script>

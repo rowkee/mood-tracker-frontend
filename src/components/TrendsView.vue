@@ -1,6 +1,7 @@
 <template>
     <NavBar/>
-    <h1>Trends and your Happiness</h1>
+    <h1>Trends that (might) Effect Your Happiness</h1>
+    <label for="weather">Weather</label>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
