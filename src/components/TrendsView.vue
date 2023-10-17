@@ -1,9 +1,6 @@
 <template>
-<container id="navAndTitle" class="container">
     <NavBar/>
     <h1>Trends and your Happiness</h1>
-</container>
-<container id="weatherChart" class="container">
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -20,7 +17,6 @@
                 </tr>
             </tbody>
     </table>
-</container>
 
 </template>
     

@@ -89,7 +89,7 @@ export default {
         } else {
             this.$router.replace({path: ``})
         }
-        fetch(`${process.env.BACKEND_URL}/entry/list/${this.email}`)
+        fetch(`${process.env.VUE_APP_BACKEND_URL}/entry/list/${this.email}`)
             .then(response => response.json())
             .then(result => {
                 this.entries = result
@@ -98,7 +98,7 @@ export default {
     },
     methods: {
         deleteEntry: function (entryId) {
-            fetch(`${process.env.BACKEND_URL}/entry/list/delete/${entryId}`, {
+            fetch(`${process.env.VUE_APP_BACKEND_URL}/entry/list/delete/${entryId}`, {
                 method: "DELETE",
             })
                 .then(res => {
