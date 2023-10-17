@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <router-link to="/home" class="navbar-brand">Moodle</router-link>
-    <div class="navbar-nav ml-auto">
+    <router-link to="/home" class="navbar-brand" id="moodle">Moodle</router-link>
+    <div class="navbar-nav ml-auto" id="navItems">
         <router-link to="/entry/list" class="nav-item nav-link">Entries</router-link>
         <router-link to="/trends" class="nav-item nav-link">Trends</router-link>
         <router-link to="/insights" class="nav-item nav-link">Insights</router-link>

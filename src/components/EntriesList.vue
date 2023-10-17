@@ -62,7 +62,6 @@
     
 <script>
 import { decodeCredential } from 'vue3-google-login'
-const API_URL = `${process.env.BACKEND_URL}/entry/list`
 import NavBar from './NavBar.vue'
 
 
@@ -90,7 +89,7 @@ export default {
         } else {
             this.$router.replace({path: ``})
         }
-        fetch(`${API_URL}/${this.email}`)
+        fetch(`/${process.env.BACKEND_URL}/entry/list/${this.email}`)
             .then(response => response.json())
             .then(result => {
                 this.entries = result
@@ -99,7 +98,7 @@ export default {
     },
     methods: {
         deleteEntry: function (entryId) {
-            fetch(`${API_URL}/entry/list/delete/${entryId}`, {
+            fetch(`${process.env.BACKEND_URL}/entry/list/delete/${entryId}`, {
                 method: "DELETE",
             })
                 .then(res => {

@@ -1,7 +1,7 @@
 <template>
 <container id="navAndTitle" class="container">
     <NavBar/>
-    <h1>See some motherclucking trends on your Mental Health</h1>
+    <h1>Trends and your Happiness</h1>
 </container>
 <container id="weatherChart" class="container">
     <table class="table">

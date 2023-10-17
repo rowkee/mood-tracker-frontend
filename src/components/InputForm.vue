@@ -1,81 +1,84 @@
 <template>
     <NavBar />
-    <h1> What's going on compadre? </h1>
-    
-    <container id="category-life" class="container slider">
-        <form>
-            <h2>Life Categories</h2>
+    <div id="inputForm">
+        <container id="category-life" class="container slider">
+            <form>
+                <h2>Life </h2>
+                <div>
+                    <label for="customRange3" class="form-label">Work</label>
+                    <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="life.work">
+                </div>
+                <div>
+                    <label for="customRange3" class="form-label">Family</label>
+                    <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="life.family">
+                </div>
+                <div>
+                    <label for="customRange3" class="form-label">Friends</label>
+                    <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3"
+                        v-model="life.friends">
+                </div>
+                <div>
+                    <label for="customRange3" class="form-label">Financial Wellbeing</label>
+                    <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3"
+                        v-model="life.finances">
+                </div>
+            </form>
+        </container> <br>
+
+        <container id="category-Mind" class="container slider">
+            <h2>Mind </h2>
             <div>
-                <label for="customRange3" class="form-label">Work</label>
-                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="life.work">
+                <label for="customRange3" class="form-label">Mood</label>
+                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.mood">
             </div>
             <div>
-                <label for="customRange3" class="form-label">Family</label>
-                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="life.family">
+                <label for="customRange3" class="form-label">Stress</label>
+                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.stress">
             </div>
             <div>
-                <label for="customRange3" class="form-label">Friends</label>
-                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="life.friends">
+                <label for="customRange3" class="form-label">Worry</label>
+                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.worry">
             </div>
             <div>
-                <label for="customRange3" class="form-label">Financial Wellbeing</label>
-                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="life.finances">
+                <label for="customRange3" class="form-label">Feeling in Control</label>
+                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.control">
             </div>
-        </form>
-    </container> <br>
+            <div>
+                <label for="customRange3" class="form-label">Feeling Supported</label>
+                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.support">
+            </div>
+            <div>
+                <label for="customRange3" class="form-label">Optimism</label>
+                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.optimism">
+            </div>
+        </container> <br>
 
-    <container id="category-Mind" class="container slider">
-        <h2>Mind Categories</h2>
-        <div>
-            <label for="customRange3" class="form-label">Mood</label>
-            <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.mood">
-        </div>
-        <div>
-            <label for="customRange3" class="form-label">Stress</label>
-            <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.stress">
-        </div>
-        <div>
-            <label for="customRange3" class="form-label">Worry</label>
-            <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.worry">
-        </div>
-        <div>
-            <label for="customRange3" class="form-label">Feeling in Control</label>
-            <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.control">
-        </div>
-        <div>
-            <label for="customRange3" class="form-label">Feeling Supported</label>
-            <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.support">
-        </div>
-        <div>
-            <label for="customRange3" class="form-label">Optimism</label>
-            <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="mind.optimism">
-        </div>
-    </container> <br>
+        <container id="category-Activities" class="container slider">
+            <h2>Activity </h2>
+            <div>
+                <label for="customRange3" class="form-label">Exercise</label>
+                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3"
+                    v-model="activity.exercise">
+            </div>
+            <div>
+                <label for="customRange3" class="form-label">Bad Habits</label>
+                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="activity.habits">
+            </div>
+            <div>
+                <label for="customRange3" class="form-label">Alchohol and Other Drugs</label>
+                <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="activity.drugs">
+            </div>
+        </container> <br>
 
-    <container id="category-Activities" class="container slider">
-        <h2>Activity Categories</h2>
-        <div>
-            <label for="customRange3" class="form-label">Exercise</label>
-            <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="activity.exercise">
-        </div>
-        <div>
-            <label for="customRange3" class="form-label">Bad Habits</label>
-            <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="activity.habits">
-        </div>
-        <div>
-            <label for="customRange3" class="form-label">Alchohol and Other Drugs</label>
-            <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3" v-model="activity.drugs">
-        </div>
-    </container> <br>
+        <container class="notes slider">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Anything else you'd like to add?</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="notes"></textarea>
+            </div>
+        </container> <br>
 
-    <container class="notes slider">
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Anything else you'd like to add?</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="notes"></textarea>
-        </div>
-    </container> <br>
-
-    <input type="submit" id="submitButton" value="Submit" v-on:click="submitEntry">
+        <input type="submit" id="submitButton" value="Submit" v-on:click="submitEntry">
+    </div>
 </template>
 
 
@@ -92,23 +95,23 @@ export default {
         userName: '',
         userEmail: '',
         life: {
-            work: 5,
-            family: 5,
-            friends: 5,
-            finances: 5
+            work: 3,
+            family: 3,
+            friends: 3,
+            finances: 3
         },
         mind: {
-            mood: 5,
-            stress: 5,
-            worry: 5,
-            control: 5,
-            support: 5,
-            optimism: 5,
+            mood: 3,
+            stress: 3,
+            worry: 3,
+            control: 3,
+            support: 3,
+            optimism: 3,
         },
         activity: {
-            exercise: 5,
-            habits: 5,
-            drugs: 5,
+            exercise: 3,
+            habits: 3,
+            drugs: 3,
         },
         notes: '',
         location: {
@@ -170,9 +173,7 @@ export default {
 </script>
 
 <style>
-
 .slider {
     max-width: 19vw;
 }
-
 </style>
