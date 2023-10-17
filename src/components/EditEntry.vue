@@ -74,7 +74,7 @@ export default {
             this.$router.replace({ path: `/` })
         }
             const route = useRoute()
-            fetch(`${process.env.VUE_APP_BACKEND_URL}/${route.params.id}`)
+            fetch(`${process.env.VUE_APP_BACKEND_URL}/entry/list/edit/${route.params.id}`)
             .then(response => response.json())
             .then (result => {
                 this.entry = result
@@ -119,11 +119,10 @@ export default {
                     console.log(res.status)
                     this.$router.replace({path: `/entry/list`})
                 });
-            alert('AAAAGGHHH')
+            alert('Flawless Deletory')
             }
     },
     
 
 }
 </script>
-

@@ -33,7 +33,7 @@
                     <th>Habits</th>
                     <th>Notes</th>
                     <th>Edit</th>
-                    <th>Delete</th>
+                    <!-- <th>Delete</th> -->
                 </tr>
             </thead>
             <tbody v-for="entry in entries" :key="entry._id">
@@ -53,7 +53,7 @@
                     <td> {{ entry.activityDrugs }} </td>
                     <td> {{ entry.notes }} </td>
                     <td><router-link :to="`/entry/edit/${entry._id}`" custom v-slot="{ navigate }"><button class="btn btn-dark" @click="navigate" role="">Edit</button></router-link></td>
-                    <td><button class="btn btn-danger" @click="deleteEntry(entry._id)">Delete</button></td>
+                    <!-- <td><button class="btn btn-danger" @click="deleteEntry(entry._id)">Delete</button></td> -->
                 </tr>
             </tbody>
         </table>
