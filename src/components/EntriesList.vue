@@ -89,7 +89,7 @@ export default {
         } else {
             this.$router.replace({path: ``})
         }
-        fetch(`/${process.env.BACKEND_URL}/entry/list/${this.email}`)
+        fetch(`${process.env.BACKEND_URL}/entry/list/${this.email}`)
             .then(response => response.json())
             .then(result => {
                 this.entries = result
