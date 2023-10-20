@@ -167,6 +167,7 @@ export default {
                 })
             })
                 .then(res => console.log(res.status))
+                this.$router.replace({path: `/entry/list`})
         },
     }
 }
