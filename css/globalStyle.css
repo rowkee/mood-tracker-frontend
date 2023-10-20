@@ -47,6 +47,10 @@ table {
   border-radius: 10px;
 }
 
+#weatherTable{
+  max-width: 40%;
+}
+
 #logoutButton {
   justify-content: right;
 }

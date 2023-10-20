@@ -2,7 +2,7 @@
     <NavBar/>
     <h1>Trends that (might) Effect Your Happiness</h1>
     <label for="weather">Weather</label>
-    <table class="table">
+    <table class="table" id="weatherTable">
             <thead class="thead-dark">
                 <tr>
                     <th>Date</th>
@@ -12,7 +12,7 @@
             </thead>
             <tbody v-for="entry in entries" :key="entry._id">
                 <tr>
-                    <td> {{ this.$moment(entry.locationLocaltime).format('L') }} </td>
+                    <td> {{ this.$moment(entry.locationLocaltime).format('DD/MM/YYYY') }} </td>
                     <td> {{ entry.currentConditionText }} </td>
                     <td> <img :src="entry.currentIcon" alt="Weather Icon" /> </td>
                 </tr>
