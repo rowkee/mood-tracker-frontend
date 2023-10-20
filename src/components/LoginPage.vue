@@ -1,17 +1,11 @@
 <template>
-    <h1>Login page</h1>
-    <div v-if="isLoggedIn">
-        <h2>Hello {{ userName }}</h2>
-        <button class='btn btn-primary' @click="handleLogOut">Log Out</button>
-    </div>
-    <div v-else>
-        <GoogleLogin :callback="callback" />
-    </div>
+    <h1>Login</h1>
+    <GoogleLogin :callback="callback" />
 </template>
 
 
 <script>
-import { decodeCredential, googleLogout } from 'vue3-google-login'
+import { decodeCredential } from 'vue3-google-login'
 import 'vue-router';
 
 export default {
@@ -52,11 +46,6 @@ export default {
             })
             this.$router.replace({path: `/home`})          
         },
-        handleLogOut: function () {
-            googleLogout()
-            this.$cookies.remove('user_session')
-            this.isLoggedIn = false
-        }
     }
 }
 </script>

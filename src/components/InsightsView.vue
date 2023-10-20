@@ -1,6 +1,8 @@
 <template>
     <NavBar/>
-    <h1>Some PROPER insights that only Freud could tell you</h1>
+    <h1>The Freudulator</h1>
+    <h2>We're sorry but our Freudulator is currently too busy <br> Please Come Back Soon</h2>
+    <img src="../assets/freudulator.png" alt="">
 
 </template>
     

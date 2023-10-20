@@ -64,6 +64,12 @@ export default {
     components: {
         NavBar,
     },
+
+    //Failed to get the date to render the way I want in edit view 
+    // beforeMount() {
+    //     this.entry.entryDate = this.formatDate(this.entry.entryDate)
+    // },
+
     mounted() {
         if (this.$cookies.isKey('user_session')) {
             this.isLoggedIn = true
@@ -111,6 +117,11 @@ export default {
                 this.$router.replace({path: `/entry/list`})
             });
         },
+
+        // formatDate: function (date) {
+        //     return this.$moment(date).format('DD/MM/YYYY')
+        // },
+
         deleteEntry: function () {
             fetch(`${process.env.VUE_APP_BACKEND_URL}/entry/list/delete/${this.id}`, {
                     method: "DELETE",

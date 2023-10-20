@@ -38,7 +38,7 @@
             </thead>
             <tbody v-for="entry in entries" :key="entry._id">
                 <tr>
-                    <td> {{ this.$moment(entry.entryDate).format('L') }} </td>
+                    <td> {{ this.$moment(entry.entryDate).format('DD/MM/YYYY') }} </td>
                     <td> {{ entry.lifeWork }} </td>
                     <td> {{ entry.lifeFamily }} </td>
                     <td> {{ entry.lifeFriends }} </td>
