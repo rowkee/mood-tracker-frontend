@@ -22,7 +22,7 @@ export default {
             this.isLoggedIn = true
             const userData = decodeCredential(this.$cookies.get('user_session'))
             this.userName = userData.given_name
-            this.$router.replace({path: `/entry/list/`})          
+            this.$router.replace({path: `/home`})          
         }
     },
 
