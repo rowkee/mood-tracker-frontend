@@ -11,8 +11,7 @@ I decided to build a mood tracking app, where users would be able to enter their
 The app would then allow them to see trends that help them understand and take action to course-correct if they desire. 
 This was based on my interest in mental health and my inability to detect mood changes in myself. 
 
-The app was designed and built in 6 days.
-
+The app was designed and built in 6 days. The deployed version can be found [HERE](https://moodle-me.netlify.app).
 
 
 ### Tech Stack
@@ -37,7 +36,11 @@ I then moved on to create some basic wireframe so I'd thought out the overall la
 For each increment I would write pseudocode, again with the purpose of helping me focus on what exactly I wanted to achieve with each piece of code I was writing. 
 
 ### Coding 
-(to be completed)
+* Set out components
+* Add Google Auth and check user is logged in each component
+* Build the full create entry functionality
+* Edit and delete
+* Weather API
 
 ## Future Developments
 ### BUGs
@@ -52,31 +55,9 @@ I'd love to add:
   
 ## Summary
 ### Challenges 
-(to be completed)
+* Auth was tricky
+* Weather API didn't work as expected (because they lied about their pay model)
+* Learning the VUE way of doing things.
+* Getting dates rendering correctly. 
 
 
-### Wins
-(to be completed)
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
