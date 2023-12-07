@@ -40,7 +40,7 @@ For each increment I would write pseudocode, again with the purpose of helping m
 <screenshot of components list>
 * I then used the Google Auth library to add the ability to Sign Up, Login and Logout. I used a small piece of code to check in each component if a user is signed in. 
 
-``` 
+``` javascript
 mounted() {
        if (this.$cookies.isKey('user_session')) {
            this.isLoggedIn = true
@@ -53,7 +53,7 @@ mounted() {
 
 * Next I built out the end to end functionality to add a mood entry. This meant creating the form, setting out the inputs, setting up the backend API routes, creating the Mongo models and schemas. This was the most time consuming. 
 
-```
+``` javascript
 const entrySchema = new mongoose.Schema ({
  name:  String,
  entryDate: Date,
@@ -76,10 +76,12 @@ const entrySchema = new mongoose.Schema ({
 
 
 const newEntry = mongoose.model('newEntry', entrySchema)
+```
 
 * Next adding the edit and delete functionality was much more straightforward. 
 * Finally, to add the Weather data for a mood entry, I found a suitable provider and created the Mongo models and schemas that would store a weather entry embedded into a mood entry: 
 
+``` javascript
 router.post('/entry/add', async (req, res) => {
  let weatherLocation ={}
  let weatherCurrent = {}
@@ -128,7 +130,7 @@ router.post('/entry/add', async (req, res) => {
    })
  })
 })
-
+```
 
 ## Future Developments
 ### BUGs
